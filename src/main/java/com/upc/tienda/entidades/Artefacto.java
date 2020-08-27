@@ -8,11 +8,23 @@ public class Artefacto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long codigo;
+
     @Column(name = "DESCRIPTION_CAMPO", length = 50, nullable = false)
+    private String descripcion;
+
     private String marca;
     private String modelo;
     private int garantia;
     private double precio;
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
 
     public Long getCodigo() {
         return codigo;
